@@ -1,0 +1,35 @@
+.address__title {
+    @extend .footer__title;
+}
+
+.address__icon  {
+    &-list {
+        display: flex;
+        flex-direction: row;
+        }
+
+        &-item{
+            width: 44px;
+            height: 44px;
+            border: none;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            transition: background-color $delay $timingFunc; 
+        }
+        
+        &-item:hover {
+            background-color: $focusColor;
+        }
+}
+
+.address__icon {
+    display: block;
+    margin: 0 auto;
+    fill: $titleColor;
+}
+
+

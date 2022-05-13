@@ -1,0 +1,44 @@
+.header {
+    border-bottom: 1px solid $borderColor;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @media (min-width: $mobile) {
+        width: $mobile;
+    }
+    @media (min-width: $tablet) {
+        width: $tablet;
+    }
+    @media (min-width: $desktop) {
+        width: $desktop;
+    }
+
+    &.nav {
+        @media (min-width: $tablet) {
+            width: $tablet;
+            display: flex;
+        }
+        @media (min-width: $desktop) {
+            width: $desktop;
+            align-items: baseline;
+        }
+    }
+ 
+}
+
+.header__nav {
+    padding: 16px 15px;
+    @media (min-width: $mobile)  {
+    position: relative;
+    }
+    @media (min-width: $tablet) {
+    width: $tablet;
+    }
+    @media (min-width: $desktop) {
+        width: 100%;
+    }
+}
+

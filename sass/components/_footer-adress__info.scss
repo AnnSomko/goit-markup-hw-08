@@ -1,0 +1,72 @@
+.footer {
+    background-color: $mainColor;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @media (min-width: $desktop) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    
+
+    &-logo {
+        color: $titleColor;
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: $titleColor;
+    }
+    
+}
+
+.address {
+    &__info,
+    &__links {
+        margin-bottom: 60px;
+    }
+
+    &__icon-list {
+        display: flex;
+       justify-content: center;
+    }
+
+    @media (min-width: $tablet) {
+        display: flex;
+        width: calc((100% - 2 * 10px)/2);
+        margin: 5px;
+    }
+
+    @media (min-width: $desktop) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &__item:not(:last-child) {
+            margin-bottom: 9px;
+        }
+    }
+   
+
+    &__item {
+        font-style: normal;
+        font-size: 14px;
+        line-height: 1.7;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.6); 
+    }
+
+    &__item:first-child {
+        color: $titleColor;
+    }
+
+    
+}
+

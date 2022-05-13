@@ -1,0 +1,85 @@
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    @media (min-width: $mobile) {
+        padding: 60px 0;
+    }
+}
+
+.content {
+    padding-bottom: 0px;
+
+    &__list {
+        @media (min-width: $desktop) {
+        margin: -15px;
+        }
+        @media (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+        padding-bottom: 60px;
+        }
+    }
+
+    &__item {
+       text-align: center;
+        @media (min-width: $tablet) {
+            width: calc((100% - 2 * 30px)/2);
+            margin: 15px;
+            text-align: left;
+        }
+        @media (min-width: $desktop) {
+            width: calc((100% - 3 * 30px)/3);
+            margin: 15px;
+        }
+    }
+
+    &__item::before {
+    content: "";
+    width: 270px;
+    height: 120px;
+    background: $btnColor url(../images/antenna.svg) no-repeat center;
+    display: block;
+    margin-bottom: 30px;
+
+    @media (min-width: $mobile) {
+        width: 100%;
+    }
+    @media (min-width: $tablet) {
+        width: 100%;
+    }
+    }
+
+    &__item:nth-child(4n) {
+        @media (min-width: $desktop) {
+        margin-right: 0px;
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 1.7;
+        letter-spacing: 0.03em;
+        color: $textColor;
+    }
+
+    &__title {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.15;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: $brandColor;
+
+        margin-bottom: 10px;
+    }
+}
+
+@each $item in clock, diagram, astronaut {
+    .icon-#{$item}::before {
+      background-image: url('../images/#{$item}.svg');
+    }
+  }
+
+  

@@ -1,0 +1,120 @@
+.contacts__list {
+    display: flex;
+    @media (min-width: $mobile) and (max-width: 767px) {
+        flex-direction: column-reverse;
+    }
+
+    @media (min-width: $tablet) and (max-width: 1199px){
+        flex-direction: column;
+    }
+    @media (min-width: $desktop) {
+        margin-left: auto;
+    }
+}
+
+.contacts__item {
+    @media (min-width: $tablet) and (max-width: 767px) {
+        display: flex;
+        flex-direction: row;
+    }
+    @media (min-width: $desktop) {
+        margin-left: 30px;
+    }
+}
+
+.phone {
+        @media (min-width: $mobile) and (max-width: 767px){
+            padding-top: 302px;
+            font-size: 34px;
+            padding-bottom: 32px;
+            color: $focusColor;
+        }
+        @media (min-width: $tablet) and (max-width: 1199px) {
+            display: flex;
+            color: $textColor;
+        }
+    }
+
+.mail {
+    @media (min-width: $mobile) {
+        padding-bottom: 64px;
+    }
+    @media (min-width: $tablet) and (max-width: 1199px) {
+        display: flex;
+        margin-bottom: 10px;
+        padding: 0;
+    }
+}    
+
+.mail__text,
+.phone__text {
+    @media (min-width: $tablet) {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.15;
+        letter-spacing: 0.02em; 
+        display: block;
+    }
+    @media (min-width: $desktop) {
+        margin-left: 10px;
+    }
+    cursor: pointer;
+    transition: color $delay $timingFunc;
+
+    
+    &:hover,
+    &:focus {
+        color: $focusColor;
+    }
+
+}
+
+.contacts__icon {
+    @media (min-width: $mobile) {
+       display: none;
+    }
+
+    @media (min-width: $tablet) {
+        display: block;
+        margin-right: 8px;
+        margin-left: 84px;
+    }
+        vertical-align: middle;
+        fill: currentColor;
+        transition: fill $delay $timingFunc;
+
+        &:hover {
+            fill: $focusColor;
+        }
+}
+
+.contacts__list-social {
+    @media (min-width: $tablet) {
+        display: none;
+    }
+
+    &.is-open {
+        @media (min-width:$mobile) and (max-width: 767px) {
+            display: flex;
+            flex-direction: row;
+            font-size: 18px;
+            font-weight: 500;
+            color: $focusColor;
+    
+            &>.contacts__list-item {
+                border-right: 1px solid rgba(33, 33, 33, 0.2);
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+
+            &>.contacts__list-item:last-child {
+                border-right: none;
+                padding-right: 0;
+            }
+
+            &>.contacts__list-item:first-child {
+                padding-left: 0;
+            }
+        }
+    }
+}

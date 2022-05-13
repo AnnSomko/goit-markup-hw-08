@@ -1,0 +1,100 @@
+.section__images-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 50px;
+        @media (min-width: $tablet) {
+            margin: 15px;
+        }
+    }
+
+.section__images-item {
+        margin-right: 30px;
+        margin-bottom: 30px;
+        position: relative;
+        transition: box-shadow $delay $timingFunc;
+
+        &:hover {
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+            cursor: pointer;
+        }
+        @media (min-width: $tablet) {
+            width: calc((100% - 2 * 30px)/2);
+        }
+        @media (min-width: $desktop) {
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
+        
+            &:nth-last-child(-n + 3) {
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    .section__photo {
+        display: block;
+    }
+
+    .section__figure {
+        margin: 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .section__text {
+        position: absolute;
+        height: 100%;
+        top: 0;
+       
+        font-size: 18px;
+        line-height: 1.5;
+        letter-spacing: 0.03em;
+        text-align: left;
+        padding: 63px 24px 0px;
+        
+        transform: translateY(100%);
+        transition: transform $delay $timingFunc;;
+        
+        background-color: rgba(33, 150, 243, 0.9);
+        color: $titleColor;
+
+        .section__figure:hover & {
+            transform: translateY(0);
+        }
+    }
+
+    @mixin bordered($color) {
+        border-left: 1px solid $color;
+        border-right: 1px solid $color;
+        border-bottom: 1px solid $color;
+      }
+
+    .section__figcaption {
+        position: relative;
+        z-index: 1;
+        padding: 0 24px;
+        background-color: $titleColor;
+        @include bordered($border-img);
+    }
+    
+    .section__name {
+        padding-top: 20px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 2;
+        letter-spacing: 0.06em;
+        color: $brandColor;
+    }
+    
+    .section__about {
+        margin-top: 4px;
+        padding-bottom: 20px;
+    
+        padding-top: 0px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.9;
+        letter-spacing: 0.03em;
+        color: $textColor;
+    }

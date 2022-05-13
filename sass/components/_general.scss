@@ -1,0 +1,24 @@
+body {
+    font-family: $heading-font-family, $body-font-family;
+    background-color: $titleColor;
+    margin: 0;
+}
+
+h1,h2,h3,p,ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $textColor;
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body .modal-open {
+    overflow: hidden;
+}
