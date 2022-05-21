@@ -13,6 +13,5 @@
     mobileMenuRef.classList.toggle("is-open");
     mobileLogo.classList.toggle("is-open");
     mobileLinkSocial.classList.toggle("is-open");
-    /*document.body.classList.toggle("is-open");*/
   });
 })();

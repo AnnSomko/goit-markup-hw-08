@@ -88,12 +88,13 @@
 }
 
 .modal__custom-text {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .modal__custom-text strong {
     text-decoration: underline;
     font-weight: 400;
+    color: $focusColor;
 }
 
 .modal__btn {

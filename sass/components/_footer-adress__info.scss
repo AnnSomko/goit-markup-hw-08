@@ -3,12 +3,7 @@
     text-align: center;
     padding-top: 60px;
     padding-bottom: 60px;
-    @media (min-width: $desktop) {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
     
-
     &-logo {
         color: $titleColor;
         margin-bottom: 20px;
@@ -24,36 +19,49 @@
         text-transform: uppercase;
         color: $titleColor;
     }
-    
+    @media (min-width: $desktop) {
+        text-align: left;
+    }
 }
 
 .address {
-    &__info,
-    &__links {
-        margin-bottom: 60px;
-    }
-
-    &__icon-list {
-        display: flex;
-       justify-content: center;
-    }
-
     @media (min-width: $tablet) {
+        width: 100%;
         display: flex;
-        width: calc((100% - 2 * 10px)/2);
-        margin: 5px;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 
     @media (min-width: $desktop) {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
-        &__item:not(:last-child) {
-            margin-bottom: 9px;
+        justify-content: space-evenly;
+    }
+    &__info,
+    &__links {
+        margin-bottom: 60px;
+        @media (min-width: $tablet) and (max-width: 1199px){
+            width: 50%;
+        }
+        @media (min-width: $desktop) {
+            margin-bottom: 0;
         }
     }
-   
+
+    &__links,
+    &__form {
+        @media (min-width: $desktop) {
+            padding-top: 12px;
+        }      
+    }
+
+    &__icon-list {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 9px;
+    }
 
     &__item {
         font-style: normal;

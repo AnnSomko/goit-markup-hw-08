@@ -1,6 +1,7 @@
 .about {
-    @media (min-width: $mobile) {
-        display: none;
+    display: none;
+    @media (min-width: $tablet) {
+        display: block;
     }
 }
 

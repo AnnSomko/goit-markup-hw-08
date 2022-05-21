@@ -2,6 +2,7 @@ body {
     font-family: $heading-font-family, $body-font-family;
     background-color: $titleColor;
     margin: 0;
+    box-sizing: border-box;
 }
 
 h1,h2,h3,p,ul {
