@@ -836,6 +836,7 @@ body .modal-open {
 
 @media (min-width: 1200px) {
   .address {
+    width: unset;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
