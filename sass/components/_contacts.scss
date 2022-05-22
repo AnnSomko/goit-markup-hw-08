@@ -53,42 +53,41 @@
 }
 
 .contacts__icon {
-    margin-right: 8px;
-    vertical-align: middle;
-    fill: $textColor;
-    @media (max-width: 767px) {
-        display: none;
+    display: none;
+    &:hover {
+        fill: $focusColor;
+    }  
+    @media (min-width: $tablet) {
+        display: inline-block;
+        margin-right: 8px;
+        vertical-align: middle;
+        fill: $textColor; 
     }
 }
 
 .contacts__list-social {
+    &.is-open {
+        display: flex;
+        flex-direction: row;
+        box-sizing: border-box;
+    
+    &>.contacts__list-item {
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+        margin-right: 10px;
+        margin-left: 10px;
+        font-size: 18px;
+        font-weight: 500;
+        color: $focusColor;
+        &:last-child {
+            border-right: none;
+            margin-right: 0;
+            }
+        &:first-child {
+            margin-left: 0;
+            }
+        }
     @media (min-width: $tablet) {
         display: none;
-    }
-
-    &.is-open {
-        @media (max-width: 767px) {
-            display: flex;
-            flex-direction: row;
-            font-size: 18px;
-            font-weight: 500;
-            color: $focusColor;
-            box-sizing: border-box;
-    
-            &>.contacts__list-item {
-                border-right: 1px solid rgba(33, 33, 33, 0.2);
-                padding-right: 10px;
-                padding-left: 10px;
-            }
-
-            &>.contacts__list-item:last-child {
-                border-right: none;
-                padding-right: 0;
-            }
-
-            &>.contacts__list-item:first-child {
-                padding-left: 0;
-            }
         }
     }
 }

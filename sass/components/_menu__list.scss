@@ -48,16 +48,14 @@
         align-items: center;
         padding: 0; 
     }
-    }
+}
             
- 
-
 .menu__list {
-        @media (min-width: $tablet) {
-            width: 80%;
-            display: flex;
-            justify-content: space-evenly;
-        }
+    @media (min-width: $tablet) {
+        width: 80%;
+        display: flex;
+        justify-content: space-evenly;
+    }
 }
 
 .menu__item {
@@ -75,52 +73,43 @@
 
 .menu__link {
     position: relative;
-    font-size: 14px;
+    font-size: 40px;
+    line-height: 1.17;
     font-weight: 500;
-    line-height: 1.15;
     letter-spacing: 0.02em;
+    display: inline-block;
     color: $brandColor;
     cursor: pointer;
     transition: color $delay $timingFunc;
-        &.active {
-            color: $focusColor;
-        }
-    
+    &.active {
+        color: $focusColor;
+    }  
     &:hover,
     &:focus {
         color: $focusColor;
     }
-    @media (max-width: 767px) {
-        font-size: 40px;
-        line-height: 1.17;
-        font-weight: 500;
-        letter-spacing: 0.02em;
-        display: inline-block;
-    }
-   
-        &.active::after {
-        @media (min-width: $tablet){
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -175%;
-            display: block;
-            width: 100%;
-            height: 4px;
-            
-            border-radius: 2px;
-            background-color: $focusColor;
-            }
-        @media (min-width: $desktop) {
-            bottom: -23px;
+    &.active::after {
+    @media (min-width: $tablet){
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -175%;
+        display: block;
+        width: 100%;
+        height: 4px;    
+        border-radius: 2px;
+        background-color: $focusColor;
+        }
+    @media (min-width: $desktop) {
+        bottom: -23px;
         }
     }
-  
-    @media (min-width: $desktop) {
-        padding-top: 32px;
+    @media (min-width: $tablet) {
+        font-size: 14px;
+        line-height: 1.15;
     }
     @media (min-width: $desktop) {
         padding-top: 0;
     }
-};
+}
 
